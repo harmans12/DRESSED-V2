@@ -29,3 +29,20 @@ Do not add a `public/` requirement unless the Dockerfile is changed accordingly.
 7. Test the selectable-text Pre Wedding PDF as a regression test.
 
 Do not replace the existing DRESSED repository until this new deployment passes the checklist.
+
+
+## Update prepared in ChatGPT (12 Oct 2026)
+- Added a Wardrobe tab with clothing photo uploads, categories, colour and notes.
+- Wardrobe items are saved with the active local profile and can be used to create a saved look.
+- Added working Profiles and Settings screens; profile switching includes wardrobe data.
+- Settings supports exporting and importing a JSON backup of profiles, events, looks and wardrobe.
+- Added a dismissible invitation sheet with a manual-event shortcut.
+- Tapping a look photo/name opens its full look view.
+- Existing `server/app.py` and `server/parser.py` are unchanged; invitation OCR/parser behavior has not been modified.
+
+
+## Follow-up fixes (12 Oct 2026)
+- Hardened event-to-look assignment and added clearer picker states and save errors.
+- Profile switching now compares IDs consistently, reports failures, and refreshes all active profile data.
+- Wardrobe allows saving individual clothing items without a photo; photos are compressed before storage to reduce browser quota failures.
+- Save failures show an actionable message instead of silently doing nothing.
